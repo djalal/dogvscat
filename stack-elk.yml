@@ -11,8 +11,8 @@ services:
       ES_JAVA_OPTS: "-Xmx256m -Xms256m"
     networks:
       - elk
-    volumes:
-      - elasticsearch:/usr/share/elasticsearch/data
+    # volumes:
+    #   - elasticsearch:/usr/share/elasticsearch/data
     deploy:
       mode: replicated
       replicas: 1
@@ -82,8 +82,8 @@ networks:
   proxy:
     external: true
 
-volumes:
-  elasticsearch:
-    driver: rexray/dobs
-    driver_opts:
-      size: 10
+# volumes:
+#   elasticsearch:
+#     driver: rexray/dobs
+#     driver_opts:
+#       size: 10

@@ -16,8 +16,8 @@ services:
     networks:
       - proxy
       - portainer
-    volumes:
-      - web:/data
+    # volumes:
+    #   - web:/data
   agent:
     image: portainer/agent
     networks:
@@ -40,8 +40,8 @@ networks:
   portainer: {}
 
 
-volumes:
-  web:
-    driver: rexray/dobs
-    driver_opts:
-      size: 1
+# volumes:
+#   web:
+#     driver: rexray/dobs
+#     driver_opts:
+#       size: 1
